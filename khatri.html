@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            border-radius: 30px;
+            box-shadow: 2px 2px 5px 2px;
+            position: relative;
+            gap: 30px;
+            width: 95%;
+            height:95%;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid;
+            /* overflow: scroll; */
+
+        }
+
+        button {
+            width: 120px;
+            height: 45px;
+            border-radius: 9px;
+
+        }
+        #btnno{
+            color:#aba7a7f6;
+            z-index:20;
+            font-size: 21px;
+            font-weight:100;
+        }
+        #btnyes{
+            /* color; */
+            font-size: 20px;
+            font-weight:900;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello</h1>
+        <div class="btn-container">
+            <button id="btnyes">❤️</button>
+            <button id="btnno">x</button>
+        </div>
+    </div>
+    <script>
+        let yes = document.querySelector("#btnyes");
+        let no = document.querySelector("#btnno");
+        yes.addEventListener("click", function () {
+            alert("Hey !");
+        });
+        no.addEventListener("click", function () {
+            alert("__Bad-boy__");
+        });
+
+        no.addEventListener("mouseenter", function () {
+            let rml = Math.floor(Math.random() * 70);
+            let rmt = Math.floor(Math.random() * 70);
+            no.style.position = "absolute";
+            no.style.left = rml+"%";
+            console.log(rml, " and ",rmt)
+            no.style.top =rmt+"%";
+        });
+        
+
+    </script>
+</body>
+
+</html>
